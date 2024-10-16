@@ -1,0 +1,42 @@
+<!DOCTYPE html>  
+<html lang="es">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Página de Prueba</title>  
+    <link href="https://cdn.tailwindcss.com" rel="stylesheet">  
+    <style>  
+        body {  
+            display: flex;  
+            flex-direction: column;  
+            align-items: center;  
+            justify-content: center;  
+            height: 100vh;  
+            background-color: #f0f0f0;  
+        }  
+        .message {  
+            font-size: 24px;  
+            margin-bottom: 20px;  
+        }  
+    </style>  
+</head>  
+<body>  
+    <div class="message">Hola, esta es una página de prueba</div>  
+    <button id="colorButton" class="bg-blue-500 text-white px-4 py-2 rounded">Cambiar Color</button>  
+    <button id="alertButton" class="bg-green-500 text-white px-4 py-2 rounded">Mostrar Alerta</button>  
+
+    <script>  
+        const colorButton = document.getElementById('colorButton');  
+        const message = document.querySelector('.message');  
+
+        colorButton.addEventListener('click', () => {  
+            message.style.color = message.style.color === 'red' ? 'black' : 'red';  
+        });  
+
+        const alertButton = document.getElementById('alertButton');  
+        alertButton.addEventListener('click', () => {  
+            alert('¡Hola! Esta es una alerta.');  
+        });  
+    </script>  
+</body>  
+</html>
